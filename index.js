@@ -1,22 +1,17 @@
-/**
- * Challenge part 2: Display the image's author
- * 
- * With the data you've already fetched, display the name of the 
- * image author on the page. They show up as the "user" in the data
- * returned from the API.
- * 
- * Don't worry about positioning the author in the lower-left yet.
- */
 
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.regular})`
-		document.getElementById('author').innerText = `${data.user.name}`
+		document.getElementById('author').innerText = `📸: ${data.user.name}`
     })
+	.catch(err  => {
+		document.body.style.backgroundImage = 'url(https://images.unsplash.com/photo-1549558549-415fe4c37b60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM4ODkwNjV8&ixlib=rb-4.0.3&q=80&w=1080)'
+	})
     
 /**
- * {
+ Data:
+   {
 	id: "KMn4VEeEPR8",
 	created_at: "2017-10-09T01:04:47-04:00",
 	updated_at: "2021-06-02T09:02:25-04:00",
