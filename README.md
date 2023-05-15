@@ -29,7 +29,7 @@ This is a personal dashboard which can be set as a Chrome extension to be displa
 
 ## Status
 
-A live version can be viewed at: 
+A live version can be viewed at: https://personal-dashboard-7b5ad0.netlify.app/.  
 
 ## Connect
 
