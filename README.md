@@ -1,5 +1,6 @@
 # dashboard-clone
-This is my version of the capstone project for Module 9 of Scrimba.com's Frontend Career Path.
+
+This is my version of the capstone project for Module 9 of [Scrimba.com's Frontend Career Path](https://scrimba.com/learn/frontend/).
 
 ## Contents 
 
@@ -12,9 +13,11 @@ This is my version of the capstone project for Module 9 of Scrimba.com's Fronten
 - [Connect](#connect)
 
 ## Overivew
+
 This is a personal dashboard which can be set as a Chrome extension to be displayed whenever you open a new tab. The dashboard displays Bitcoin prices (current, 24hr high, 24hr low), weather information, the current time, and a nature background pulled from Unspalsh.
 
 ### Built with
+
 - HTML
 - CSS 
 - JavaScript
@@ -25,7 +28,6 @@ This is a personal dashboard which can be set as a Chrome extension to be displa
 ![Personal dashboard displaying the time in the center, crypto price information in the upper left, weather information in the upper right, and background image credit in the lower left](screenshot-dashboard.png)
 
 ## Status
-Check back for updates or follow me [@infinito@hachyderm.io](https://hachyderm.io/@infinifito) or [@wordsbyfifi](https://twitter.com/wordsbyfifi/) for progress updates.
 
 A live version can be viewed at: 
 
