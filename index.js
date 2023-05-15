@@ -1,3 +1,4 @@
+// get curernt time 
 function getCurrentTime() {
 	let currentDate = new Date()
 	document.getElementById('time').innerText = currentDate.toLocaleTimeString("en-us", {timeStyle: "medium"})
@@ -5,6 +6,7 @@ function getCurrentTime() {
 
 setInterval(getCurrentTime, 1000)
 
+// get geolocation info & display weather
 navigator.geolocation.getCurrentPosition((position) => {
 	const lat = position.coords.latitude
 	const lon = position.coords.longitude
@@ -27,8 +29,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 		.catch(err => console.error(err))
 })
 
-
-
+// get background image
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
     .then(data => {
@@ -39,7 +40,8 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 		document.body.style.backgroundImage = 'url(https://images.unsplash.com/photo-1549558549-415fe4c37b60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM4ODkwNjV8&ixlib=rb-4.0.3&q=80&w=1080)'
 	})
 
-fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
+// get crypto info
+fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
 	.then(res => res.json())
 	.then(data => {
 		document.getElementById('crypto-info').innerHTML = `
