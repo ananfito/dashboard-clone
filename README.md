@@ -1,4 +1,4 @@
-# dashboard-clone
+# personal dashboard
 
 This is my version of the capstone project for Module 9 of [Scrimba.com's Frontend Career Path](https://scrimba.com/learn/frontend/).
 
