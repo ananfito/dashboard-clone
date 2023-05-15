@@ -1,3 +1,33 @@
+function getCurrentTime() {
+	let currentDate = new Date()
+	document.getElementById('time').innerText = currentDate.toLocaleTimeString("en-us", {timeStyle: "medium"})
+}
+
+setInterval(getCurrentTime, 1000)
+
+navigator.geolocation.getCurrentPosition((position) => {
+	const lat = position.coords.latitude
+	const lon = position.coords.longitude
+	fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial`)
+		.then(res => {
+			if (!res.ok) {
+				throw Error("Weather data not available")
+			}
+			return res.json()
+		})
+		.then(data => {
+			document.getElementById('weather').innerHTML = `
+				<div class="weather__top">
+					<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon">
+					<h2>${Math.round(data.main.temp)}&#176;F</h2>
+				</div>
+				<p class="weather__city">${data.name}</p>
+			`
+		})
+		.catch(err => console.error(err))
+})
+
+
 
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
@@ -12,9 +42,6 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
 	.then(res => res.json())
 	.then(data => {
-		console.log(data)
-		console.log(data.image.thumb)
-		console.log(data.name)
 		document.getElementById('crypto-info').innerHTML = `
 			<div id="crypto-info__header">
 				<div class='crypto-info__img-container'><img src='${data.image.thumb}'/></div>

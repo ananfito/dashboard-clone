@@ -20,16 +20,17 @@ body {
     background-size: cover;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     text-shadow: 0px 0px 20px #aaaaaa;
     margin: 0;
-    padding: 0 15px;
 }
 
 main {
+    padding: .9375em;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 div.top {
@@ -58,7 +59,22 @@ div.top {
     flex-direction: column;
 }
 
+.weather {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather__top {
+    display: flex;
+    align-items: center;
+}
+
+.weather__city {
+    text-align: center;
+}
+
 h1.time {
     text-align: center;
     margin: 0;
+    font-size: 3rem;
 }
