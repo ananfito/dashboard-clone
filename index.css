@@ -37,6 +37,27 @@ div.top {
     justify-content: space-between;
 }
 
+.crypto-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+
+#crypto-info__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.crypto-info__img-container {
+    margin-right: .25rem;
+}
+
+#crypto-info__price-info {
+    display: flex;
+    flex-direction: column;
+}
+
 h1.time {
     text-align: center;
     margin: 0;
